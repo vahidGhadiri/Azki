@@ -1,0 +1,50 @@
+{
+  "primitive-teal-500": {
+    "light": "#25b79bff"
+  },
+  "primitive-teal-700": {
+    "light": "#139078ff"
+  },
+  "primitive-green-200": {
+    "light": ""
+  },
+  "primitive-green-800": {
+    "light": "#016748ff"
+  },
+  "primitive-red-200": {
+    "light": "#fbeaebff"
+  },
+  "primitive-red-800": {
+    "light": "#9e0812ff"
+  },
+  "primitive-amber-200": {
+    "light": "#ffeee3ff"
+  },
+  "primitive-amber-800": {
+    "light": "#973b00ff"
+  },
+  "primitive-sky-200": {
+    "light": "#e2f5ffff"
+  },
+  "primitive-sky-800": {
+    "light": "#0368a0ff"
+  },
+  "neutral-100": {
+    "light": "#ffffffff"
+  },
+  "neutral-300": {
+    "light": "#e5e5e5ff"
+  },
+  "neutral-500": {
+    "light": "#989898ff"
+  },
+  "neutral-600": {
+    "light": "#525252ff"
+  },
+  "neutral-700": {
+    "light": "#404040ff"
+  },
+  "neutral-950": {
+    "light": "#0a0a0aff"
+  }
+}

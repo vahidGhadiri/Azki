@@ -1,0 +1,14 @@
+.change-theme-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .change-theme {
+    border: 1px solid #75aaeb;
+    border-radius: 5px;
+    font-size: 12px;
+    color: #75aaeb;
+    padding: 8px;
+    margin-bottom: 20px;
+  }
+  
