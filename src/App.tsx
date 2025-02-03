@@ -1,6 +1,6 @@
-import { useEffect } from "react"
 import colors from "./config/tailwind/colors/index.json"
 import useTheme from "./hooks/use-theme"
+import { useEffect } from "react"
 
 const App = () => {
   const { setColors } = useTheme(colors, "light")
