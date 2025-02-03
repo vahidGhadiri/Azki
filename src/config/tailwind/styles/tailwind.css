@@ -1,0 +1,88 @@
+@import url("./fonts.css");
+@import url("./base.css");
+@import url("./border.css");
+@import url("./fa.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: var(--neutral-white);
+    font-size: var(--default-font-size);
+    direction: var(--direction);
+    color: var(--neutral-black);
+    -webkit-touch-callout: none;
+    text-align: var(--align);
+  }
+
+  * {
+    font-family: var(--font-family);
+    padding: 0;
+    margin: 0;
+  }
+
+  *,
+  *:before,
+  *:after {
+    -ms-overflow-style: none;
+    box-sizing: border-box;
+    scrollbar-width: none;
+  }
+
+  *::-webkit-scrollbar {
+    background: transparent;
+    display: none;
+    width: 0;
+  }
+
+  input,
+  textarea,
+  button,
+  a {
+    font-family: "Iran Yekan";
+    margin: 0;
+  }
+
+  input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  *,
+  button:focus {
+    outline: none;
+  }
+
+
+  a,
+  a:visited,
+  a:active,
+  a:hover {
+    text-decoration: none;
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+
+  img,
+  svg,
+  video,
+  audio {
+    display: inline-block;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+  }
+}
