@@ -56,7 +56,7 @@ export class Http<DomainService extends GeneralDomainService> implements IHttp<D
     this.options = options
   }
 
-  private async handleResponse(res: Response): Promise<Response> {
+  private async handleResponse(res: Response): Promise<Response | unknown> {
     if (res.type === "opaque") {
       const mockResponse = this.mockResponseFactory.getMockResponse(this.url)
       if (mockResponse) {
