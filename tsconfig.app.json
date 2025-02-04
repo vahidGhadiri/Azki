@@ -28,6 +28,15 @@
       ],
       "@use-cases/vehicles": [
         "src/use-cases/vehicles"
+      ],
+      "@utils": [
+        "src/utils"
+      ],
+      "@hooks": [
+        "src/hooks"
+      ],
+      "@components": [
+        "src/components"
       ]
     }
   },

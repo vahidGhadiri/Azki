@@ -14,6 +14,7 @@ export default defineConfig({
       "@use-cases/vehicles": path.resolve(__dirname, "src/use-cases/vehicles"),
       "@components": path.resolve(__dirname, "src/components"),
       "@hooks": path.resolve(__dirname, "src/hooks"),
+      "@utils": path.resolve(__dirname, "src/utils"),
     },
   },
 
