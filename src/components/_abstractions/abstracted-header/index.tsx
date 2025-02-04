@@ -32,18 +32,13 @@ const AbstractedHeader: FC<AbstractedHeaderProps> = ({ startIcon, endElement, si
     small: 15
   }
 
-  const titleClassNames = composeClassNames(["text-neutral-black", title.className, titleSizeClassNames[size]])
+  const titleClassNames = composeClassNames(["text-neutral-black ", title.className, titleSizeClassNames[size]])
 
   return (
-    <div className={composeClassNames(["flex justify-between items-center", className])}>
-      <div className="flex justify-between items-center">
-        {startIcon && <Icon size={startIconSize[size]} {...startIcon} />}
-        {title && <span className={titleClassNames} onClick={onClick}>{title.content}</span>}
-      </div>
-      {endElement &&
-        <div className="flex justify-center items-center">
-          {endElement}
-        </div>}
+    <div className={composeClassNames(["flex justify-between items-center fixed left-0 right-0 ", className])}>
+      {startIcon && <Icon size={startIconSize[size]} {...startIcon} />}
+      {title && <span className={titleClassNames} onClick={onClick}>{title.content}</span>}
+      {endElement}
     </div>
   )
 }

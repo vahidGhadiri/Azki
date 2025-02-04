@@ -24,4 +24,5 @@ declare global {
   type Data<T extends Partial<Record<AllowedKeys, unknown>>> = {
     [K in keyof T as K extends AllowedKeys ? (T[K] extends undefined ? never : K) : never]: T[K];
   };
+
 }

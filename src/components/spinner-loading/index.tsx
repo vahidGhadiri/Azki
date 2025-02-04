@@ -83,7 +83,6 @@ const SpinnerLoading: FC<SpinnerLoadingProps> = memo(({
         ) : (
           <>
             <circle
-              stroke="var(--silver-medium)"
               strokeDasharray="50 50"
               strokeLinecap="round"
               strokeWidth="6"

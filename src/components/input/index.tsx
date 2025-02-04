@@ -82,15 +82,15 @@ const Input = forwardRef<HTMLInputElement, InputProps>(({
   };
 
   const labelClassNames = composeClassNames([
-    isFocused || placeholder ? "right-8 bg-neutral-white" : "right-32",
-    "absolute bg-white w-fit transition-all duration-200 transform  z-10 flex px-6 mr-4 select-none ",
-    (isFocused || value || placeholder) ? "-top-6 text-xs text-neutral-700" : "top-[18px] text-sm text-neutral-black",
+    isFocused || placeholder ? "right-8 bg-neutral-100" : "right-32",
+    "absolute w-fit transition-all duration-200 transform  z-10 flex px-6 mr-4 select-none ",
+    (isFocused || value || placeholder) ? "-top-6 text-xs text-neutral-700" : "top-[18px] text-sm text-neutral-950",
   ]);
 
   const descriptionClassNames = composeClassNames([
     !hasError && !isSuccess && "text-neutral-700",
-    isSuccess && "text-semantic-success-dark",
-    hasError && "text-semantic-error-medium",
+    isSuccess && "text-primitive-green-800",
+    hasError && "text-primitive-amber-800",
     "text-caption-2 mx-4 select-none",
   ]);
 
@@ -100,7 +100,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(({
   ]);
 
   const wrapperClassNames = composeClassNames([
-    "box-border rounded-m pr-16 py-12 flex w-full border max-h-full items-center h-56 bg-neutral-white default-transition select-none",
+    "box-border rounded-m pr-16 py-12 flex w-full border max-h-full items-center h-56 bg-neutral-100 default-transition select-none",
     hasError ? "semantic-error-medium" : !isDisabled && !isReadOnly && "focus-within:border-neutral-black",
     isReadOnly && "border border-neutral-400",
     !hasError && "border-neutral-500",
@@ -125,7 +125,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(({
         {label && <span className={labelClassNames}>{label}</span>}
         <div className={wrapperClassNames}>
           {startIcon && "name" in startIcon && <span className="flex-shrink-0">
-            <Icon {...startIcon} color={isDisabled ? "greyLighter" : startIcon.color} />
+            <Icon {...startIcon} color={isDisabled ? "disabled" : startIcon.color} />
           </span>}
           <input
             autoComplete={autoComplete}

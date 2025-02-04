@@ -11,16 +11,11 @@ export type IconNames = keyof typeof filled & keyof typeof stroked
 const DEFAULT_SIZE = 24
 
 export type IconColor =
-  | "greyLighter"
-  | "greyMedium"
-  | "greyLight"
-  | "greyDark"
   | "primary"
+  | "disabled"
   | "success"
   | "error"
   | "alert"
-  | "white"
-  | "star"
   | "none"
 
 export interface IconProps {
@@ -43,15 +38,10 @@ const Icon = forwardRef<SVGSVGElement, IconProps>(({
 
   const colorClassNames: { [key in IconColor]: string } = {
     success: "text-semantic-success-dark",
-    error: "text-semantic-error-medium",
-    alert: "text-semantic-alert-darker",
-    greyLighter: "text-neutral-500",
-    star: "text-semantic-star-main",
-    greyMedium: "text-neutral-700",
-    greyLight: "text-neutral-600",
-    greyDark: "text-neutral-800",
-    white: "text-neutral-white",
-    primary: "text-brand-500",
+    error: "text-primitive-amber-800",
+    alert: "text-primitive-green-200",
+    primary: "text-primitive-sky-800",
+    disabled: "text-neutral-500",
     none: ""
   }
   const SelectedIcon = mode === "stroked" ? stroked[name] : filled[name]

@@ -44,9 +44,12 @@
       "@constants": [
         "src/constants"
       ],
+      "@assets": [
+        "src/assets"
+      ],
       "@config": [
         "src/config"
-      ]
+      ],
     }
   },
   "include": [

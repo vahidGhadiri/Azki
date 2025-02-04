@@ -12,8 +12,9 @@ const App = () => {
   useEffect(() => {
     setColors("light")
   }, [setColors])
-  //TODO: Add private and public routes
-  //TODO: Add Error boundary
+
+
+
   return (
     <AppLayout>
       <Router>

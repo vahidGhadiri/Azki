@@ -1,5 +1,4 @@
 import { useContent } from "@hooks"
-
 import useSignUpForm from "../../hooks/use-signup-form"
 import { Button, Input } from "@components"
 import strings from "./strings"
@@ -10,24 +9,26 @@ const SignUp = () => {
 
   return (
     <form onSubmit={formik.handleSubmit} className="flex flex-col gap-6 w-full max-w-md mx-auto">
-      <Input
-        name="name"
-        description={formik.touched.name && formik.errors.name}
-        placeholder={content(strings.namePlaceholder)}
-        hasError={!!formik.errors.name}
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
-        value={formik.values.name}
-      />
-      <Input
-        name="lastName"
-        description={formik.touched.lastName && formik.errors.lastName}
-        placeholder={content(strings.lastNamePlaceholder)}
-        hasError={!!formik.errors.lastName}
-        value={formik.values.lastName}
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
-      />
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full">
+        <Input
+          name="name"
+          description={formik.touched.name && formik.errors.name}
+          placeholder={content(strings.namePlaceholder)}
+          hasError={!!formik.errors.name}
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          value={formik.values.name}
+        />
+        <Input
+          name="lastName"
+          description={formik.touched.lastName && formik.errors.lastName}
+          placeholder={content(strings.lastNamePlaceholder)}
+          hasError={!!formik.errors.lastName}
+          value={formik.values.lastName}
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+        />
+      </div>
       <Input
         description={formik.touched.phoneNumber && formik.errors.phoneNumber}
         placeholder={content(strings.phoneNumberPlaceholder)}
@@ -48,10 +49,12 @@ const SignUp = () => {
         onBlur={formik.handleBlur}
       />
       <Button
-        className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition-colors"
+        className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition-colors mt-12"
         label={content(strings.submitButton)}
         isSubmitLoading={isSubmitLoading}
         isDisabled={isSubmitLoading}
+        mode="primary"
+        color="brand"
         type="submit"
       />
     </form>
