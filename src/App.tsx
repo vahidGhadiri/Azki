@@ -1,6 +1,10 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import { useEffect } from "react"
+
+import { AuthenticationRouter, InsuranceRouter } from "./presentations"
 import colors from "./config/tailwind/colors/index.json"
 import useTheme from "./hooks/use-theme"
+import { AppLayout } from "./components"
 
 const App = () => {
   const { setColors } = useTheme(colors, "light")
@@ -9,10 +13,17 @@ const App = () => {
     setColors("light")
   }, [setColors])
 
+
+
   return (
-    <div className={`w-screen h-screen flex justify-center items-center bg-primitive-teal-500`}>
-      <p>Whydrf</p>
-    </div>
+    <AppLayout>
+      <Router>
+        <Routes>
+          <Route path="/*" element={<AuthenticationRouter />} />
+          <Route path="/insurance/*" element={<InsuranceRouter />} />
+        </Routes>
+      </Router>
+    </AppLayout>
   )
 }
 

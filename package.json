@@ -4,20 +4,34 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
+    "extract-messages": "formatjs extract",
+    "compile": "formatjs compile",
+    "dev": "yarn run export-lang && vite",
+    "export-lang": "yarn run extract-messages 'src/**/*.{js,ts,jsx,tsx}' --out-file src/i18n/fa.json --ignore 'src/**/*.{json,d.ts}' --id-interpolation-pattern '[sha512:contenthash:base64:6]' && formatjs compile src/i18n/fa.json --ast --out-file src/i18n/compiled-lang/fa.json",
+    "build": "yarn run export-lang && tsc -b && vite build",
+    "preview": "yarn run export-lang && vite preview",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "update-icons": "bash ./scripts/update-icons.sh"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.3",
+    "@tanstack/react-query": "^4.29.0",
+    "formik": "^2.4.6",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-intl": "^6.2.1",
+    "react-router-dom": "^6.29.0",
+    "uuid": "^11.0.5",
+    "yup": "^1.6.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
+    "@formatjs/cli": "^6.5.1",
+    "@types/node": "^22.13.0",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
+    "@types/react-intl": "^3.0.0",
+    "@types/uuid": "^10.0.0",
     "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.17.0",
@@ -25,6 +39,7 @@
     "eslint-plugin-react-refresh": "^0.4.16",
     "globals": "^15.14.0",
     "postcss": "^8.5.1",
+    "sass-embedded": "^1.83.4",
     "tailwindcss": "^3.4.14",
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.18.2",

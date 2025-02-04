@@ -1,0 +1,32 @@
+{
+  "presentations.lastNamePlaceholder": {
+    "defaultMessage": "نام خانوادگی"
+  },
+  "presentations.lastNameValidation": {
+    "defaultMessage": "نام خانوادگی باید حداقل ۲ کاراکتر داشته باشد"
+  },
+  "presentations.namePlaceholder": {
+    "defaultMessage": "نام"
+  },
+  "presentations.nameValidation": {
+    "defaultMessage": "اسمت دستکم باید ۴ حرف داشته باشه، البته که اسامی زیر ۴ حرف هم داریم مثل رضا، ولی خب..."
+  },
+  "presentations.passwordPlaceholder": {
+    "defaultMessage": "رمز عبور"
+  },
+  "presentations.passwordValidation": {
+    "defaultMessage": "رمز باید بین ۴ تا ۱۰ کاراکتر و شامل عدد، یک حرف کوچک و یک حرف بزرگ باشد"
+  },
+  "presentations.phoneNumberPlaceholder": {
+    "defaultMessage": "شماره تلفن"
+  },
+  "presentations.phoneNumberValidation": {
+    "defaultMessage": "شماره موبایل باید ۱۱ رقم و با ۰۹ شروع شود"
+  },
+  "presentations.requiredFieldError": {
+    "defaultMessage": "اینم پر کن بی زحمت..."
+  },
+  "presentations.submitButton": {
+    "defaultMessage": "ثبت‌نام"
+  }
+}
