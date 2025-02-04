@@ -13,7 +13,8 @@ export type AbstractedButtonSize = "big" | "medium" | "small"
 
 
 export interface AbstractedButtonProps {
-  onClick: MouseEventHandler<HTMLButtonElement>
+  type?: "submit" | "reset" | "button" | undefined
+  onClick?: MouseEventHandler<HTMLButtonElement>
   color?: AbstractedButtonColor
   size?: AbstractedButtonSize
   mode?: AbstractedButtonMode

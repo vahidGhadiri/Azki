@@ -18,7 +18,7 @@ export class UserRepository implements IUserRepository {
   login: IUserRepository["login"] = () => {
     return this.http.request({
       serviceName: "userLogin",
-      method: "GET",
+      method: "POST",
     }, {
       responseBody: {
         displayName: "vahid",

@@ -87,3 +87,6 @@ export const Button = forwardRef(({
     </AbstractedButton>
   )
 })
+
+
+export default Button

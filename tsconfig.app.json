@@ -37,6 +37,12 @@
       ],
       "@components": [
         "src/components"
+      ],
+      "@constants": [
+        "src/constants"
+      ],
+      "@config": [
+        "src/config"
       ]
     }
   },

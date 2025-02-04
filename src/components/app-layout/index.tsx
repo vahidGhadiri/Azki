@@ -12,7 +12,7 @@ interface LayoutProps {
 
 const AppLayout = ({ children, className, headerProps }: LayoutProps) => {
   return (
-    <div className={composeClassNames(["flex justify-center items-center w-screen h-screen bg-primitive-teal-500", className])}>
+    <div className={composeClassNames(["flex justify-end items-center w-screen h-screen flex-col", className])}>
       {headerProps && <AbstractedHeader {...headerProps} />}
       {children}
     </div>

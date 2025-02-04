@@ -1,5 +1,6 @@
 import type { MouseEventHandler, ReactElement, ReactNode } from "react"
 import type { QueryStatus } from "@tanstack/react-query"
+import SpinnerLoading from "../spinner-loading"
 
 export interface ErrorProps {
   onClick: MouseEventHandler<HTMLButtonElement>
@@ -18,7 +19,7 @@ interface DataDecoratorProps<BlockerDataType> {
 }
 
 const DataDecorator = <BlockerDataType,>({
-  renderLoader = () => <div>Loading...</div>,
+  renderLoader = () => <SpinnerLoading />,
   renderError = () => <div>Error...</div>,
   children,
   status
