@@ -17,7 +17,7 @@ headers.set('Content-Type', 'application/json')
 
 export const TIMEOUT_RESPONSE = new Response(
   JSON.stringify({
-    message: 'ErrorMessages.Timeout',
+    message: ErrorMessages.Timeout,
     status: ErrorStatusCode.Timeout,
   }),
   {

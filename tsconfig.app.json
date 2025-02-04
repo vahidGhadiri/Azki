@@ -25,6 +25,9 @@
     "paths": {
       "@infrastructure/*": [
         "src/infrastructure/*"
+      ],
+      "@use-cases/vehicles": [
+        "src/use-cases/vehicles"
       ]
     }
   },

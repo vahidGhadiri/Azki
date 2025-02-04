@@ -24,7 +24,7 @@ export interface IUrlBuilder {
   buildUrl: (args: BuildUrlParams) => string
 }
 export default class UrlBuilder implements IUrlBuilder {
-  public buildUrl({ serviceEndpoint, pathParams, query, baseUrl = process.env.REACT_APP_BASE_URL }: BuildUrlParams): string {
+  public buildUrl({ serviceEndpoint, pathParams, query, baseUrl = import.meta.env.VITE_APP_BASE_URL }: BuildUrlParams): string {
     let servicePath = serviceEndpoint
     let queryParams = ""
 

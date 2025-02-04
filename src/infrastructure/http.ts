@@ -1,6 +1,7 @@
 import { parse as uuidParse, v4 as uuid, stringify as uuidStringify } from 'uuid'
 import { CONNECTION_PROBLEM_RESPONSE, REQUEST_DURATION, TIMEOUT_RESPONSE } from './constants'
 import { ErrorBuilder, HeadersBuilder, UrlBuilder } from './builders'
+import { MockResponseFactory } from './builders/mock-factory'
 
 export interface IHttp<DomainService extends GeneralDomainService> {
   request<Service extends GeneralService, MockResponse = unknown>(
@@ -35,6 +36,7 @@ interface GeneralDomainService {
 }
 
 export class Http<DomainService extends GeneralDomainService> implements IHttp<DomainService> {
+  private mockResponseFactory: MockResponseFactory
   private headersBuilder: HeadersBuilder
   private domainService: DomainService
   private errorBuilder: ErrorBuilder
@@ -46,6 +48,7 @@ export class Http<DomainService extends GeneralDomainService> implements IHttp<D
     domainService: DomainService,
     options: HttpOptions = {}
   ) {
+    this.mockResponseFactory = new MockResponseFactory()
     this.headersBuilder = new HeadersBuilder()
     this.errorBuilder = new ErrorBuilder()
     this.urlBuilder = new UrlBuilder()
@@ -54,6 +57,12 @@ export class Http<DomainService extends GeneralDomainService> implements IHttp<D
   }
 
   private async handleResponse(res: Response): Promise<Response> {
+    if (res.type === "opaque") {
+      const mockResponse = this.mockResponseFactory.getMockResponse(this.url)
+      if (mockResponse) {
+        return mockResponse
+      }
+    }
     if (res.ok) {
       return res.json()
     } else {
@@ -68,9 +77,8 @@ export class Http<DomainService extends GeneralDomainService> implements IHttp<D
 
   async request<Service extends GeneralService, MockResponse = unknown>(
     { query, method, requestBody, pathParams, baseUrl, serviceName }: RequestParams<DomainService>, mockDataOptions?: { responseBody: MockResponse }): Promise<Service["response"] | MockResponse> {
-    if (mockDataOptions && mockDataOptions.responseBody) {
-      return mockDataOptions.responseBody
-    }
+
+    if (mockDataOptions && mockDataOptions.responseBody) return mockDataOptions.responseBody
 
     const controller = new AbortController()
     const timeoutId = setTimeout(() => controller.abort(), REQUEST_DURATION)
@@ -93,8 +101,8 @@ export class Http<DomainService extends GeneralDomainService> implements IHttp<D
           .add("x-request-id", requestId)
           .build(),
         signal: controller.signal,
+        mode: "no-cors"
       })
-
       return this.handleResponse(response)
     } catch (error) {
       if (error instanceof Error) {

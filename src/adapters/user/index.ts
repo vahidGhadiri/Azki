@@ -1,2 +1,1 @@
-export { default as useGetHomeSections } from "./use-get-home-sections"
-
+export { default as useUserLogin } from "./use-user-login"

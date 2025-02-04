@@ -1,5 +1,7 @@
 import { useQuery } from "@tanstack/react-query"
-import { VehicleType, VehicleUseCaseProvider } from "src/use-cases/vehicles"
+import { VehicleUseCaseProvider } from "@use-cases/vehicles"
+import type { VehicleType } from "@use-cases/vehicles"
+
 
 
 const useGetVehicleTypes = (options?: AdapterOptionType<VehicleType[]>) =>
