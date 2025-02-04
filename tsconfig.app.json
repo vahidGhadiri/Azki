@@ -20,7 +20,37 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+    "baseUrl": "./",
+    "paths": {
+      "@infrastructure/*": [
+        "src/infrastructure/*"
+      ],
+      "@use-cases/vehicles": [
+        "src/use-cases/vehicles"
+      ],
+      "@utils": [
+        "src/utils"
+      ],
+      "@hooks": [
+        "src/hooks"
+      ],
+      "@adapters/user": [
+        "src/adapters/user",
+      ],
+      "@components": [
+        "src/components"
+      ],
+      "@constants": [
+        "src/constants"
+      ],
+      "@assets": [
+        "src/assets"
+      ],
+      "@config": [
+        "src/config"
+      ],
+    }
   },
   "include": [
     "src"

@@ -1,41 +1,41 @@
 @font-face {
-    font-family: "Iran Yekan";
-    font-style: normal;
-    font-weight: 300;
-    src: url("../fonts/IRANYekanMobile-Light.woff");
+  font-family: "Iran Yekan";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/IRANYekanMobile-Bold.woff");
 }
 
 @font-face {
-    font-family: "Iran Yekan";
-    font-style: normal;
-    font-weight: 400;
-    src: url("../fonts/IRANYekanMobile.woff");
+  font-family: "Iran Yekan";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/IRANYekanMobile.woff");
 }
 
 @font-face {
-    font-family: "Iran Yekan";
-    font-style: normal;
-    font-weight: normal;
-    src: url("../fonts/IRANYekanMobile.woff");
+  font-family: "Iran Yekan";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/IRANYekanMobile.woff");
 }
 
 @font-face {
-    font-family: "Iran Yekan";
-    font-style: normal;
-    font-weight: 500;
-    src: url("../fonts/IRANYekanMobile-Medium.woff");
+  font-family: "Iran Yekan";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/IRANYekanMobile-Medium.woff");
 }
 
 @font-face {
-    font-family: "Iran Yekan";
-    font-style: normal;
-    font-weight: 700;
-    src: url("../fonts/IRANYekanMobile-Bold.woff");
+  font-family: "Iran Yekan";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/IRANYekanMobile-Bold.woff");
 }
 
 @font-face {
-    font-family: "Iran Yekan";
-    font-style: normal;
-    font-weight: 800;
-    src: url("../fonts/IRANYekanMobile-ExtraBold.woff");
+  font-family: "Iran Yekan";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/IRANYekanMobile-ExtraBold.woff");
 }

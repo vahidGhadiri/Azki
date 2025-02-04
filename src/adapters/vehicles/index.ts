@@ -1,0 +1,1 @@
+export { default as useGetVehicleTypes } from "./use-get-vehicle-types"

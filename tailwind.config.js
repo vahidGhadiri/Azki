@@ -49,7 +49,6 @@ module.exports = {
       transparent: "transparent",
       current: "currentColor",
       ...mapColors(generalColors),
-      "vahid": "blue"
     },
     spacing: Object.fromEntries(generateSpacings()),
     extend: {
