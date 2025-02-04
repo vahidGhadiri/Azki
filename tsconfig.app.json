@@ -35,6 +35,9 @@
       "@hooks": [
         "src/hooks"
       ],
+      "@adapters/user": [
+        "src/adapters/user",
+      ],
       "@components": [
         "src/components"
       ],

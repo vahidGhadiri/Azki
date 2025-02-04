@@ -12,6 +12,7 @@ export default defineConfig({
     alias: {
       "@infrastructure/http": path.resolve(__dirname, "src/infrastructure/http"),
       "@use-cases/vehicles": path.resolve(__dirname, "src/use-cases/vehicles"),
+      "@adapters/user": path.resolve(__dirname, "src/adapters/user"),
       "@components": path.resolve(__dirname, "src/components"),
       "@constants": path.resolve(__dirname, "src/constants"),
       "@config": path.resolve(__dirname, "src/config"),

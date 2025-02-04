@@ -38,7 +38,7 @@ export default defineMessages({
     defaultMessage: "رمز عبور",
   },
   submitButton: {
-    id: "presentations.passwordPlaceholder",
+    id: "presentations.submitButton",
     defaultMessage: "ثبت‌نام",
   }
 });
